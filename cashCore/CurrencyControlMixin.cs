@@ -43,13 +43,20 @@ namespace cashCore
 
                 if (validCharacters.Contains(replacementString))
                 {
-                    if (position <= dotPosition + decimalPlaces)
+                    if (position <= dotPosition)
                     {
                         return true;
                     }
                     else
                     {
-                        return false;
+                        if (currentText.Length - dotPosition <= decimalPlaces)
+                        {
+                            return true;
+                        }
+                        else
+                        {
+                            return false;
+                        }
                     }
                 }
                 else

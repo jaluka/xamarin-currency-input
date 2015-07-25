@@ -11,3 +11,9 @@ For iOS the UITextField is subclassed.
 ## Android
 
 For Android the EditText class is subclassed.
+
+## reactive UI
+
+With this control you can simply bind your currency observable:
+
+this.Bind(this.ViewModel, x => x.Bedrag, x => x.txf_bedrag1.Amount);
